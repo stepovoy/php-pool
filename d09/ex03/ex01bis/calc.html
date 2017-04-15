@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		setTimeout(popup, 30000);
+	})
+	function popup() {
+		alert('Please, use me...');
+		setTimeout(popup, 30000);
+	}
+	function calc(form) {
+		var operation = form.elements["operation"].value;
+		var value1 = form.elements["value1"].value;
+		var value2 = form.elements["value2"].value;
+		if (!isInt(value1) || !isInt(value2)) {
+			alert('Error :(');
+		}
+		else {
+			value1 = parseInt(value1, 10);
+			value2 = parseInt(value2, 10);
+			if (value1 < 0 || value2 < 0) {
+				alert('Error :(');
+			}
+			else {
+				if (operation == "+") {
+					output(value1 + value2);
+				}
+				else if (operation == "-") {
+					output(value1 - value2);
+				}
+				else if (operation == "*") {
+					output(value1 * value2);
+				}
+				else if (operation == "/") {
+					if (value2 == 0) {
+						output('It’s over 9000!');
+					}
+					else {
+						output(value1 / value2);
+					}
+				}
+				else if (operation == "%") {
+					if (value2 == 0) {
+						output('It’s over 9000!');
+					}
+					else {
+						output(value1 % value2);
+					}
+				}
+			}
+		}
+	}
+	function isInt(value) {
+		return (!isNaN(value) && parseInt(Number(value)) == value && !isNaN(parseInt(value, 10)));
+	}
+	function output(value) {
+		console.log(value);
+		alert(value);
+	}
+</script>
+</head>
+<body>
+<form onsubmit="calc(this)" action="">
+	<input id="value1" type="text">
+	<select name="operation" type="text">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+		<option value="%">%</option>
+	</select>
+	<input id="value2" type="text">
+	<button id="submit" name="submit" value="OK">Try me!</button>
+</form>
+</body>
+</html>
