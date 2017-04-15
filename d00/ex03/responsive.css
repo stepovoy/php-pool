@@ -1,0 +1,84 @@
+body {
+    font-family: "Times New Roman";
+}
+
+h1, h2, div {
+    text-align: center;
+}
+
+h1 {
+    font-size: 4vw;
+}
+
+h2 {
+    margin: 5px 0;
+    font-size: 1.5vw;
+}
+
+p {
+    margin: 3px;
+    font-size: 1vw;
+}
+
+p.atomic-weight {
+    text-align: right;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    width: 1%;
+}
+
+td.diatomic-nonmetal {
+    background-color: #BAE92B;
+}
+
+td.noble-gas {
+    background-color: #61E5E3;
+}
+
+td.alkali-metal {
+    background-color: #DC282C;
+}
+
+td.alkaline-earth-metal {
+    background-color: #DDAE64;
+}
+
+td.metalloid {
+    background-color: #A5A85D;
+}
+
+td.polyatomic-nonmetal {
+    background-color: #65EC8E;
+}
+
+td.transition-nonmetal {
+    background-color: #F1A7A8;
+}
+
+td.post-transition-nonmetal {
+    background-color: #C4BABA;
+}
+
+td.lanthanide {
+    background-color: #E15DE5;
+}
+
+td.actinide {
+    background-color: #EC69AE;
+}
+td.unknown-chemical-properties {
+    background-color: #CCC7C7;
+}
+
+td.diatomic-nonmetal:hover, td.noble-gas:hover, 
+td.alkali-metal:hover, td.alkaline-earth-metal:hover, 
+td.metalloid:hover, td.polyatomic-nonmetal:hover, 
+td.transition-nonmetal:hover, td.post-transition-nonmetal:hover, 
+td.lanthanide:hover, td.actinide:hover, td.unknown-chemical-properties:hover {
+    background-color: #E67E22;
+}
